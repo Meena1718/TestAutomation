@@ -1,0 +1,206 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 4,
+    "passes": 3,
+    "pending": 0,
+    "failures": 1,
+    "start": "2021-04-27T11:16:52.034Z",
+    "end": "2021-04-27T11:17:09.681Z",
+    "duration": 17647,
+    "testsRegistered": 6,
+    "passPercent": 50,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 2,
+    "hasSkipped": true
+  },
+  "results": [
+    {
+      "uuid": "15eb2b1a-d332-4ebb-83aa-b4ab95acba8a",
+      "title": "",
+      "fullFile": "cypress/integration/test-suite-with-po-spec.js",
+      "file": "cypress/integration/test-suite-with-po-spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "042da9de-f02d-4e3a-a329-bd4bd078e37c",
+          "title": "Test suite with Page-objects",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Create client and verify",
+              "fullTitle": "Test suite with Page-objects Create client and verify",
+              "timedOut": null,
+              "duration": 3839,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "dashboardPage.viewClients(\"Clients\");\nclientsPage.createClient(\"New Client\");\ncreateNewClient.createNewClient(randomName, randomMail, randomPhone, \"Clients\");\nclientsPage.verifyLastClient(randomName, randomMail, randomPhone);",
+              "err": {},
+              "uuid": "5d57b0d5-eb03-478c-9cdd-6a17835a08bb",
+              "parentUUID": "042da9de-f02d-4e3a-a329-bd4bd078e37c",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Delete last client",
+              "fullTitle": "Test suite with Page-objects Delete last client",
+              "timedOut": null,
+              "duration": 2479,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "dashboardPage.viewClients(\"Clients\");\nclientsPage.deleteLastClient();\ndashboardPage.performLogout(\"Login\");",
+              "err": {},
+              "uuid": "c325c3f2-eace-452d-9fad-55a7b881b2cf",
+              "parentUUID": "042da9de-f02d-4e3a-a329-bd4bd078e37c",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Create room",
+              "fullTitle": "Test suite with Page-objects Create room",
+              "timedOut": null,
+              "duration": 3260,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "dashboardPage.viewRooms(\"Rooms\");\nroomsPage.createRoom(\"New Room\");\ncreateNewRoom.createNewRoom('double', '104', '4', '4000kr', 'balcony', 'ensuite', 'Rooms');",
+              "err": {},
+              "uuid": "a0da35f2-3e7a-4fe1-ba8d-3cf1bef851f4",
+              "parentUUID": "042da9de-f02d-4e3a-a329-bd4bd078e37c",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Verify new room created",
+              "fullTitle": "Test suite with Page-objects Verify new room created",
+              "timedOut": null,
+              "duration": 4847,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "dashboardPage.viewRooms(\"Rooms\");\nroomsPage.verifyNewRoomCreated('double', '104', '4', '4000kr', 'balcony', 'ensuite');",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 4000ms: expected '<h2>' to contain 'Login'\n\nBecause this error occurred during a `before each` hook we are skipping the remaining tests in the current suite: `Test suite with Page-objects`",
+                "estack": "AssertionError: Timed out retrying after 4000ms: expected '<h2>' to contain 'Login'\n\nBecause this error occurred during a `before each` hook we are skipping the remaining tests in the current suite: `Test suite with Page-objects`\n    at Object.performValidLogin (http://localhost:3000/__cypress/tests?p=cypress/integration/test-suite-with-po-spec.js:445:24)\n    at Context.eval (http://localhost:3000/__cypress/tests?p=cypress/integration/test-suite-with-po-spec.js:221:15)",
+                "diff": null
+              },
+              "uuid": "6114912f-28cf-47a3-a2b0-4bbb5835b141",
+              "parentUUID": "042da9de-f02d-4e3a-a329-bd4bd078e37c",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Delete last room",
+              "fullTitle": "Test suite with Page-objects Delete last room",
+              "timedOut": null,
+              "duration": 0,
+              "state": "skipped",
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "dashboardPage.viewRooms(\"Rooms\");\nroomsPage.deleteLastRoom();",
+              "err": {},
+              "uuid": "8751789d-c174-4773-acd4-c5dcd4fd0ae2",
+              "parentUUID": "042da9de-f02d-4e3a-a329-bd4bd078e37c",
+              "isHook": false,
+              "skipped": true
+            },
+            {
+              "title": "Input negative values",
+              "fullTitle": "Test suite with Page-objects Input negative values",
+              "timedOut": null,
+              "duration": 0,
+              "state": "skipped",
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "dashboardPage.viewRooms(\"Rooms\");\nroomsPage.createRoom(\"New Room\");\ncreateNewRoom.inputNegativeValues('Double', '-104', '-3', '-1500kr', 'Balcony', 'Price must be greater than 0');",
+              "err": {},
+              "uuid": "0b8300ab-9316-4153-89de-656985009e29",
+              "parentUUID": "042da9de-f02d-4e3a-a329-bd4bd078e37c",
+              "isHook": false,
+              "skipped": true
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "5d57b0d5-eb03-478c-9cdd-6a17835a08bb",
+            "c325c3f2-eace-452d-9fad-55a7b881b2cf",
+            "a0da35f2-3e7a-4fe1-ba8d-3cf1bef851f4"
+          ],
+          "failures": [
+            "6114912f-28cf-47a3-a2b0-4bbb5835b141"
+          ],
+          "pending": [],
+          "skipped": [
+            "8751789d-c174-4773-acd4-c5dcd4fd0ae2",
+            "0b8300ab-9316-4153-89de-656985009e29"
+          ],
+          "duration": 14425,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.2.2"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/results",
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "5.2.0"
+    }
+  }
+}

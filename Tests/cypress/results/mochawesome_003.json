@@ -1,0 +1,124 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 2,
+    "passes": 2,
+    "pending": 0,
+    "failures": 0,
+    "start": "2021-04-27T11:28:54.974Z",
+    "end": "2021-04-27T11:28:59.208Z",
+    "duration": 4234,
+    "testsRegistered": 2,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "925cc2fa-d52d-492d-9990-2a3083c0006c",
+      "title": "",
+      "fullFile": "cypress/integration/Client-spec.js",
+      "file": "cypress/integration/Client-spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "68dcef41-a632-4050-8d54-e6dc4c5e8b46",
+          "title": "Login user",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Login",
+              "fullTitle": "Login user Login",
+              "timedOut": null,
+              "duration": 1742,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit(\"http://localhost:3000\");\ncy.get('h2').should(\"contain\", \"Login\");\ncy.get(':nth-child(1) > input').type(\"tester01\");\ncy.get(':nth-child(2) > input').type(\"GteteqbQQgSr88SwNExUQv2ydb7xuf8c\");\ncy.get('.btn').click();\ncy.get('.username').should(\"contain\", \"Welcome tester01!\");\ncy.get('h2').should(\"contain\", \"Tester Hotel Overview\");",
+              "err": {},
+              "uuid": "f2ff3615-a8a9-40ed-95f0-5dc5e574ea49",
+              "parentUUID": "68dcef41-a632-4050-8d54-e6dc4c5e8b46",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Create client",
+              "fullTitle": "Login user Create client",
+              "timedOut": null,
+              "duration": 1312,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit(\"http://localhost:3000/clients\");\ncy.get('h2').should(\"contain\", \"Clients\");\ncy.get('h2 > .btn').click();\ncy.get('h2').should(\"contain\", \"New Client\");\ncy.get(':nth-child(1) > input').type(\"tester\");\ncy.get(':nth-child(2) > input').type(\"tester@tester.com\");\ncy.get(':nth-child(3) > input').type(\"1234567891\");\ncy.get('.blue').click();\ncy.get('h2').should(\"contain\", \"Clients\");\ncy.get(':nth-child(3) > :nth-child(2) > h3').should(\"contain\", \"tester\");\ncy.get('.user > .btn').click();\ncy.get('h2').should(\"contain\", \"Login\");",
+              "err": {},
+              "uuid": "8e04019f-c283-4d79-8644-632cdb4bbfb1",
+              "parentUUID": "68dcef41-a632-4050-8d54-e6dc4c5e8b46",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "f2ff3615-a8a9-40ed-95f0-5dc5e574ea49",
+            "8e04019f-c283-4d79-8644-632cdb4bbfb1"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 3054,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.2.2"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/results",
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "5.2.0"
+    }
+  }
+}

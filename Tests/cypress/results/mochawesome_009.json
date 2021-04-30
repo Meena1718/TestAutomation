@@ -1,0 +1,129 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 2,
+    "passes": 1,
+    "pending": 0,
+    "failures": 1,
+    "start": "2021-04-29T19:26:22.154Z",
+    "end": "2021-04-29T19:26:29.954Z",
+    "duration": 7800,
+    "testsRegistered": 2,
+    "passPercent": 50,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "5e13eb22-40fd-42df-9ebf-9a48a9b41f22",
+      "title": "",
+      "fullFile": "cypress/integration/Client-spec.js",
+      "file": "cypress/integration/Client-spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "a7ff6134-4a46-47fc-9c17-3e16f2a53e72",
+          "title": "Login user",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Login",
+              "fullTitle": "Login user Login",
+              "timedOut": null,
+              "duration": 1828,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit(\"http://localhost:3000\");\ncy.get('h2').should(\"contain\", \"Login\");\ncy.get(':nth-child(1) > input').type(\"tester01\");\ncy.get(':nth-child(2) > input').type(\"GteteqbQQgSr88SwNExUQv2ydb7xuf8c\");\ncy.get('.btn').click();\ncy.get('.username').should(\"contain\", \"Welcome tester01!\");\ncy.get('h2').should(\"contain\", \"Tester Hotel Overview\");",
+              "err": {},
+              "uuid": "866715b7-3c38-4a2c-852d-e6d4718b1536",
+              "parentUUID": "a7ff6134-4a46-47fc-9c17-3e16f2a53e72",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Create client",
+              "fullTitle": "Login user Create client",
+              "timedOut": null,
+              "duration": 5008,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit(\"http://localhost:3000/clients\");\ncy.get('h2').should(\"contain\", \"Clients\");\ncy.get('h2 > .btn').click();\ncy.get('h2').should(\"contain\", \"New Client\");\ncy.get(':nth-child(1) > input').type(\"tester\");\ncy.get(':nth-child(2) > input').type(\"tester@tester.com\");\ncy.get(':nth-child(3) > input').type(\"1234567891\");\ncy.get('.blue').click();\ncy.get('h2').should(\"contain\", \"Clients\");\ncy.get(':nth-child(3) > :nth-child(2) > h3').should(\"contain\", \"tester\");\ncy.get('.user > .btn').click();\ncy.get('h2').should(\"contain\", \"Login\");",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 4000ms: expected '<h2>' to contain 'Clients'",
+                "estack": "AssertionError: Timed out retrying after 4000ms: expected '<h2>' to contain 'Clients'\n    at Context.eval (http://localhost:3000/__cypress/tests?p=cypress/integration/Client-spec.js:112:18)",
+                "diff": null
+              },
+              "uuid": "8f22b117-8bb4-4266-b553-0b73ba4044bc",
+              "parentUUID": "a7ff6134-4a46-47fc-9c17-3e16f2a53e72",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "866715b7-3c38-4a2c-852d-e6d4718b1536"
+          ],
+          "failures": [
+            "8f22b117-8bb4-4266-b553-0b73ba4044bc"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 6836,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.2.2"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/results",
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "5.2.0"
+    }
+  }
+}

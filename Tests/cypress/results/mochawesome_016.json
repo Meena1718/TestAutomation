@@ -1,0 +1,200 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 6,
+    "passes": 6,
+    "pending": 0,
+    "failures": 0,
+    "start": "2021-04-29T19:51:34.155Z",
+    "end": "2021-04-29T19:51:53.607Z",
+    "duration": 19452,
+    "testsRegistered": 6,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "4d01faab-402e-45a4-b23b-5506f4c25997",
+      "title": "",
+      "fullFile": "cypress/integration/test-suite-with-po-spec.js",
+      "file": "cypress/integration/test-suite-with-po-spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "0227f2eb-4664-4d14-964c-64980a7e2450",
+          "title": "Test suite with Page-objects",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Create client and verify",
+              "fullTitle": "Test suite with Page-objects Create client and verify",
+              "timedOut": null,
+              "duration": 3325,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "dashboardPage.viewClients(\"Clients\");\nclientsPage.createClient(\"New Client\");\ncreateNewClient.createNewClient(randomName, randomMail, randomPhone, \"Clients\");\nclientsPage.verifyLastClient(randomName, randomMail, randomPhone);",
+              "err": {},
+              "uuid": "2eace1c9-9c04-443f-8bb6-8f7e33601ab7",
+              "parentUUID": "0227f2eb-4664-4d14-964c-64980a7e2450",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Delete last client",
+              "fullTitle": "Test suite with Page-objects Delete last client",
+              "timedOut": null,
+              "duration": 1939,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "dashboardPage.viewClients(\"Clients\");\nclientsPage.deleteLastClient();",
+              "err": {},
+              "uuid": "e4e8e241-ef85-484f-a268-521661fc8c59",
+              "parentUUID": "0227f2eb-4664-4d14-964c-64980a7e2450",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Create room",
+              "fullTitle": "Test suite with Page-objects Create room",
+              "timedOut": null,
+              "duration": 2961,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "dashboardPage.viewRooms(\"Rooms\");\nroomsPage.createRoom(\"New Room\");\ncreateNewRoom.createNewRoom('double', randomRoomNumber, randomFloor, randomPrice, 'balcony', 'ensuite', 'Rooms');",
+              "err": {},
+              "uuid": "494815f5-d3e2-4d6f-8c7b-2c9125ea7631",
+              "parentUUID": "0227f2eb-4664-4d14-964c-64980a7e2450",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Verify new room created",
+              "fullTitle": "Test suite with Page-objects Verify new room created",
+              "timedOut": null,
+              "duration": 1757,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "dashboardPage.viewRooms(\"Rooms\");\nroomsPage.verifyNewRoomCreated('double', randomRoomNumber, randomFloor, randomPrice, 'balcony', 'ensuite');",
+              "err": {},
+              "uuid": "31826089-d522-498d-af63-4677f4d6c9d0",
+              "parentUUID": "0227f2eb-4664-4d14-964c-64980a7e2450",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Delete last room",
+              "fullTitle": "Test suite with Page-objects Delete last room",
+              "timedOut": null,
+              "duration": 2054,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "dashboardPage.viewRooms(\"Rooms\");\nroomsPage.deleteLastRoom();",
+              "err": {},
+              "uuid": "2f7d2195-e8cc-4843-880e-329f04297282",
+              "parentUUID": "0227f2eb-4664-4d14-964c-64980a7e2450",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Input negative values",
+              "fullTitle": "Test suite with Page-objects Input negative values",
+              "timedOut": null,
+              "duration": 3771,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "dashboardPage.viewRooms(\"Rooms\");\nroomsPage.createRoom(\"New Room\");\ncreateNewRoom.inputNegativeValues('Double', '-104', '-3', '-1500kr', 'Balcony', 'Price must be greater than 0', randomPrice, 'Rooms');",
+              "err": {},
+              "uuid": "91e4002a-9db1-43a2-aaaa-ae11173282a7",
+              "parentUUID": "0227f2eb-4664-4d14-964c-64980a7e2450",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "2eace1c9-9c04-443f-8bb6-8f7e33601ab7",
+            "e4e8e241-ef85-484f-a268-521661fc8c59",
+            "494815f5-d3e2-4d6f-8c7b-2c9125ea7631",
+            "31826089-d522-498d-af63-4677f4d6c9d0",
+            "2f7d2195-e8cc-4843-880e-329f04297282",
+            "91e4002a-9db1-43a2-aaaa-ae11173282a7"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 15807,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.2.2"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/results",
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "5.2.0"
+    }
+  }
+}
